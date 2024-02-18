@@ -1,0 +1,22 @@
+Step 1: Identify the States
+We need to track the number of 'a’s and ensure that it’s even, and then accept one or more 'b’s. So, we can have the following states:
+
+q0: Initial state, where we haven’t seen any input yet.
+q1: We’ve seen an odd number of 'a’s.
+q2: We’ve seen an even number of 'a’s.
+q3: Final state, where we’ve seen at least one ‘b’ after an even number of 'a’s.
+
+Step 2: Define the Transition Function
+The transition function δ is defined as follows:
+
+δ(q0, a) = q1
+δ(q1, a) = q2
+δ(q2, a) = q1
+δ(q2, b) = q3
+δ(q3, b) = q3
+
+Step 3: Define the Initial and Final States
+The initial state is q0, and the final state is q3.
+
+Now, let’s write a Python program to simulate this DFSM:
+

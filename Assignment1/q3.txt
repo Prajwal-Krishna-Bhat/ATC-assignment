@@ -1,0 +1,7 @@
+Identify the States: We will have three states in this DFSM:
+start: the initial state before we have seen any characters.
+seen_a: we have seen an ‘a’ as the first character.
+seen_b: we have seen a ‘b’ as the first character.
+Identify the Start State: The start state will be start.
+Identify the Accept States: The accept states will be seen_a and seen_b, but only if the last character seen is the same as the first character.
+Identify the Transitions: For each state, we will have two transitions - one for ‘a’ and one for ‘b’. If we are in the start state and we see an ‘a’, we will move to the seen_a state. If we see a ‘b’, we will move to the seen_b state. If we are in the seen_a or seen_b state, we stay in the same state regardless of whether we see an ‘a’ or ‘b’.
